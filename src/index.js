@@ -29,11 +29,9 @@ const appRouterMiddleware = routerMiddleware(history);
 const createStoreWithMiddleware = applyMiddleware(multiClientMiddleware(api, axiosMiddlewareOptions), appRouterMiddleware)(createStore);
 const store = createStoreWithMiddleware(rootReducer(history), {}, window.__REDUX_DEVTOOLS_EXTENSION__ ? window.__REDUX_DEVTOOLS_EXTENSION__() : f => f);
 
-
 ReactDOM.render(
     <Provider store={store}>
         <ConnectedRouter history={history} children={routes}/>
     </Provider>,
     document.getElementById('wrapper')
 );
-

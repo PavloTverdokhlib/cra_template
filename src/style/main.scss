@@ -1,8 +1,12 @@
-@import "./reset";
+//@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,900');
 
-* {
-  box-sizing: border-box;
-}
-body {
-  background-color: cornflowerblue;
-}
+@import "./reset";
+@import "./base";
+
+//@font-face {
+//  font-family: 'Inter';
+//  font-style:  normal;
+//  font-weight: 400;
+//  src: url("../assets/fonts/Inter-Regular.woff2") format("woff2"),
+//  url("../assets/fonts/Inter-Regular.woff") format("woff");
+//}

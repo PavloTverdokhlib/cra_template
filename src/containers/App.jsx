@@ -1,11 +1,11 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 import '../style/main.scss';
 
-const App = (props) => {
+const App = ({children}) => {
     return (
-        <div>
-            {props.children}
-        </div>
+        <Fragment>
+            {children}
+        </Fragment>
     );
 };
 
