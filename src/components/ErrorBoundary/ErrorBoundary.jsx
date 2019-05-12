@@ -6,14 +6,12 @@ export default class ErrorBoundary extends Component {
     };
 
     componentDidCatch() {
-        console.log('did catch');
         this.setState({ hasError: true });
     }
 
     render(){
         const { children } = this.props;
         const { hasError } = this.state;
-        console.log(hasError);
         if(hasError) {
             return <div>Something goes wrong...</div>
         }
