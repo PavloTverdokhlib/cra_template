@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 class Container extends Component {
+
     render(){
         if(!localStorage.token) return <Redirect to="/auth" />;
         return (

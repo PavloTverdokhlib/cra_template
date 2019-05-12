@@ -10,6 +10,8 @@ import api from "./actions/api";
 import routes from './routes/routes';
 import rootReducer from './reducers';
 
+import ErrorBoundary from './components/ErrorBoundary/ErrorBoundary';
+
 const axiosMiddlewareOptions = {
     interceptors: {
         request: [
@@ -31,7 +33,9 @@ const store = createStoreWithMiddleware(rootReducer(history), {}, window.__REDUX
 
 ReactDOM.render(
     <Provider store={store}>
-        <ConnectedRouter history={history} children={routes}/>
+        <ErrorBoundary>
+            <ConnectedRouter history={history} children={routes}/>
+        </ErrorBoundary>
     </Provider>,
     document.getElementById('wrapper')
 );
