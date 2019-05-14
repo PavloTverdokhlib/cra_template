@@ -16,8 +16,8 @@ const axiosMiddlewareOptions = {
     interceptors: {
         request: [
             (action, config) => {
-                if (localStorage.token || localStorage.token_res) {
-                    let token = localStorage.token ? localStorage.token : localStorage.token_res;
+                if (localStorage.token) {
+                    let token = localStorage.token;
                     config.headers['Authorization'] = 'Token ' + token
                 }
                 return config;

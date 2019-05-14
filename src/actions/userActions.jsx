@@ -1,16 +1,13 @@
 import * as types from './constants.jsx';
 
-//authentication actions
-
-export function postLogin(data) {
+export function getData() {
     return {
-        type: types.LOGIN,
+        type: types.GET_DATA,
         payload: {
             client: 'default',
             request: {
-                url: `/rest-auth/login/`,
-                method: "post",
-                data
+                url: `/people/`,
+                method: "get"
             }
         }
     };
