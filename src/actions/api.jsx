@@ -1,14 +1,14 @@
-import axios from "axios";
+import axios from 'axios';
 import * as apiUrl from '../config';
 
-export const api = {
-    default:{
+export const axiosApi = {
+    default: {
         client: axios.create({
             baseURL: apiUrl.API_BASE_URL,
             responseType: 'json'
         })
     },
-    second:{
+    second: {
         client: axios.create({
             baseURL: apiUrl.API_SECOND_URL,
             responseType: 'json'
@@ -16,4 +16,16 @@ export const api = {
     }
 };
 
-export default api;
+export const axiosOptions = {
+    interceptors: {
+        request: [
+            (action, config) => {
+                if (localStorage.token) {
+                    let token = localStorage.token;
+                    config.headers['Authorization'] = 'Token ' + token;
+                }
+                return config;
+            }
+        ]
+    }
+};

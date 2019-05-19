@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 
 export default class ErrorBoundary extends Component {
     state = {
@@ -9,11 +9,11 @@ export default class ErrorBoundary extends Component {
         this.setState({ hasError: true });
     }
 
-    render(){
+    render() {
         const { children } = this.props;
         const { hasError } = this.state;
-        if(hasError) {
-            return <div>Something goes wrong...</div>
+        if (hasError) {
+            return <div>Something goes wrong...</div>;
         }
         return children;
     }
