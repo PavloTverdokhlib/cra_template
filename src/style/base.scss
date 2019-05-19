@@ -1,13 +1,13 @@
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-  background-color: #FEFEFE;
+    background-color: #fefefe;
 }
 
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }

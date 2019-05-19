@@ -1,11 +1,10 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 
-import { getData } from "../../actions/userActions";
+import { getData } from '../../actions/userActions';
 
 class Container extends Component {
-
     componentDidMount() {
         // const { getData } = this.props;
         // getData().then(res => {
@@ -15,24 +14,23 @@ class Container extends Component {
         // });
     }
 
-    render(){
-        if(!localStorage.token) return <Redirect to="/auth" />;
-        return (
-            <div>
-                MainPage
-            </div>
-        );
+    render() {
+        if (!localStorage.token) return <Redirect to="/auth" />;
+        return <div>MainPage</div>;
     }
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
     return {
         // user: state.user
-    }
+    };
 };
 
 const mapDispatchToProps = {
     getData
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Container);
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(Container);

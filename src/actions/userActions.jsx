@@ -7,7 +7,7 @@ export function getData() {
             client: 'default',
             request: {
                 url: `/people/`,
-                method: "get"
+                method: 'get'
             }
         }
     };

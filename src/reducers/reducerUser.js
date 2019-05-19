@@ -6,7 +6,7 @@ const INITIAL_STATE = {
 };
 
 export default function(state = INITIAL_STATE, action) {
-    switch(action.type) {
+    switch (action.type) {
         // case types.LOGIN_SUCCESS :
         //     return {...state, get_pools : action.payload.data};
         // case types.LOGIN_FAIL :
