@@ -4,6 +4,8 @@ import { connect } from 'react-redux';
 
 import { getData } from '../../actions/userActions';
 
+import './Container.scss';
+
 class Container extends Component {
     componentDidMount() {
         // const { getData } = this.props;
